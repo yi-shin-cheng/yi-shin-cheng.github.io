@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Yi-Shin Cheng">
+        <meta name="description" content="YiShinCheng's personal page for Linear Algebra">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="../../styles/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <title>Linear Algebra</title>
+    </head>
+    <body>
+        <h1>Linear Algebra</h1>
+        <div class="Main_Content">
+            <div class="NavBar">
+                <p>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../Data Structure & Algorithms/index.html">Data Structure & Algorithms</a></li>
+                        <li><a href="../../Discrete Mathematics/index.html">Discrete Mathematics</a></li>
+                        <li><a class="active" href="../index.html">Linear Algebra</a></li>
+                        <li><a href="../../Operating System/index.html">Operating System</a></li>
+                        <li><a href="../../Computer Organizations/index.html">Computer Organizations</a></li>
+                        <li><a href="../../Projects/index.html">Projects</a></li>
+                    </ul>
+                </p>
+            </div>
+        
+            <div class="Bio">
+                <h2 class="Theme">Matrices and its operations</h2>
+                <main>
+                    <div class="content">
+                        <h3 class="subtitle">矩陣</h3>
+                        <p>
+                        assume F is a field and A is a<strong> \(m\times n\) matrix over F</strong><br>
+                        each element \(a_{ij} \in F\) and \(a_{ij}\) is scalar
+                        <ul>
+                            <li><strong>Real matrix</strong>: \(F=R\)</li>
+                            <li><strong>Complex matrix</strong>: \(F=C\)</li>
+                            <li><strong>Zero matrix</strong>: 全部元素皆為0，記為\(O\)</li>
+                            <li><strong>Negative matrix</strong>: -A = [-\(a_{ij}\)]</li>
+                            <li><strong>Identity matrix</strong>: 對角線元素全都是1，其他元素皆0，記為\(I_{n}\)。是一個非常重要的矩陣，可以用它來代表列運算、操作反矩陣等等...</li>
+                            <li><strong>Upper triangular matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i>j}\)，如果是\(a_{ij}=0,\forall {i\ge j}\)，對角線元素皆為0，則稱為strictly upper triangular matrix</li>
+                            <li><strong>Lower triangular matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i< j}\)，如果是\(a_{ij}=0,\forall {i\le j}\)，對角線元素皆為0，則稱為strictly lower triangular matrix</li>
+                            <li><strong>Diagonal matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i\neq j} \)，<em>對角矩陣同時為上三角矩陣也為下三角矩陣</em></li>
+                        </ul>
+                        </p>
+                        
+                        <h3 class="subtitle">矩陣相等</h3>
+                        <p>
+                            <strong>Definition:</strong> \(A,B \in F^{m\times n}\)，A=B iff A,B當中所有元素都相等。
+                        </p>
+
+                        <h3 class="subtitle">矩陣運算定理</h3>
+                        <p>
+                            assume \(A,B,C,D\in F^{m\times n}\)，\(x,y\in F\)<br>
+                            <em>有些看似簡單的定理在某些題目很有用，反著想可能就會解出來，例如把O轉化成\(O\cdot A\)</em><br>
+                            <ul>
+                                <li>A+B = B+A</li>
+                                <li>(A+B)+C = A+(B+C)</li>
+                                <li>A+O = A = O+A</li>
+                                <li>A+(-A) = O = (-A)+A</li>
+                                <li>(x+y)A = xA + yA</li>
+                                <li>x(yA) = (xy)A</li>
+                                <li>(-1)A = -A</li>
+                                <li>\(0\cdot A\) = O</li>
+                                <li>\(x\cdot O\) = O</li>
+                                <li>A(BC) = (AB)C</li>
+                                <li>\(A(B\pm C) = AB\pm AC\)</li>
+                                <li>\((B\pm C)A = BA\pm CA\)</li>
+                                <li>\(ABC\pm ADC = A(B\pm D)C\) ，<em>IMPORTANT!!!</em></li>
+                                <li>x(AB) = (xA)B = A(xB)</li>
+                                <li>若A為方陣(\(n\times n\))，則A可以和自己相乘，且可以定義\(A^0 = I_n\),\(A^k = A^{k-1}A\)</li>
+                            </ul>
+                            以上的性質和傳統的數字運算差不多，但矩陣有幾個性質和數字運算不同，如以下
+                            <ul>
+                                <li>AB不一定等於BA，在某些特殊條件下會等於，例如B=\(A^{-1}\)(反矩陣)</li>
+                                <li>\(A^n = O\)不保證A = O，但A = O的話\(A^n\)必定等於O</li>
+                                <li>\(A^2 = A\)不保證A=I或O</li>
+                                <li>\(A\neq O,B\neq O\)不保證\(AB\neq O\)，但反過來\(AB\neq O\)保證\(A\neq O, B\neq O\)</li>
+                                <li>\(AB = AC \)不保證B=C，不具消去性</li>
+                                <li>\(X^n=A\)不保證X最多具有n個解，可能更多或更少</li>
+
+                            </ul>
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
