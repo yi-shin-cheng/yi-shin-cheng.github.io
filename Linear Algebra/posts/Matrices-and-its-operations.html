@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="../../styles/style.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
         <title>Linear Algebra</title>
     </head>
     <body>
@@ -33,14 +35,14 @@
                     <div class="content">
                         <h3 class="subtitle">矩陣</h3>
                         <p>
-                        assume F is a field and A is a<strong> \(m\times n\) matrix over F</strong><br>
-                        each element \(a_{ij} \in F\) and \(a_{ij}\) is scalar
+                        assume F is a field and A is a<strong> \\(m\times n\\) matrix over F</strong><br>
+                        each element \\(a_{ij} \in F\\) and \\(a_{ij}\\) is scalar
                         <ul>
-                            <li><strong>Real matrix</strong>: \(F=R\)</li>
-                            <li><strong>Complex matrix</strong>: \(F=C\)</li>
-                            <li><strong>Zero matrix</strong>: 全部元素皆為0，記為\(O\)</li>
-                            <li><strong>Negative matrix</strong>: -A = [-\(a_{ij}\)]</li>
-                            <li><strong>Identity matrix</strong>: 對角線元素全都是1，其他元素皆0，記為\(I_{n}\)。是一個非常重要的矩陣，可以用它來代表列運算、操作反矩陣等等...</li>
+                            <li><strong>Real matrix</strong>: \\(F=R\\)</li>
+                            <li><strong>Complex matrix</strong>: \\(F=C\\)</li>
+                            <li><strong>Zero matrix</strong>: 全部元素皆為0，記為\\(O\\)</li>
+                            <li><strong>Negative matrix</strong>: -A = [-\\(a_{ij}\\)]</li>
+                            <li><strong>Identity matrix</strong>: 對角線元素全都是1，其他元素皆0，記為\\(I_{n}\\)。是一個非常重要的矩陣，可以用它來代表列運算、操作反矩陣等等...</li>
                             <li><strong>Upper triangular matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i>j}\)，如果是\(a_{ij}=0,\forall {i\ge j}\)，對角線元素皆為0，則稱為strictly upper triangular matrix</li>
                             <li><strong>Lower triangular matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i< j}\)，如果是\(a_{ij}=0,\forall {i\le j}\)，對角線元素皆為0，則稱為strictly lower triangular matrix</li>
                             <li><strong>Diagonal matrix</strong>: A為\(n\times n\)矩陣且\(a_{ij}=0,\forall {i\neq j} \)，<em>對角矩陣同時為上三角矩陣也為下三角矩陣</em></li>
